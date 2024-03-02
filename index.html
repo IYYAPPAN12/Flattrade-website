@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="res.css">
     <title>Flattrade</title>
 </head>
 
@@ -187,7 +187,16 @@
     <div class="content" id="order">
       <div class="order-content">
         <div>
-      <h1>Order content</h1>
+          <div class="mynav">
+            <ul>
+              <li><a href="">Orders</a></li>
+              <li><a href="">GTT(0)</a></li>
+              <li><a href="">TradeBook(0)</a></li>
+              <li><a href="">Basket Orders(0)</a></li>
+              <li><a href="">Webhook</a></li>
+            </ul>
+          </div>
+          <span class="target"></span>
 
     </div>
     <hr>
@@ -195,10 +204,26 @@
     </div>
     <div class="content" id="position">
       <div class="position-content">
-        <div>
-      <h1>position content</h1>
+        <div class="position-value">
+      <p class="position-head">Positions</p>
+      <div class="position-table">
+
+        <table>
+          <tbody>
+            <tr>
+              <td class="value"><p>0.0</p></td>
+              <td class="value"><p>0.0</p></td>
+            </tr>
+            <tr class="border">
+          <td class="data">Days MTM</td>
+          <td class="data">P&L</td>
+        </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
     <hr>
+
     </div>
     </div>
     <div class="content" id="holding">
