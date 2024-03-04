@@ -422,7 +422,7 @@ form.nosubmit {
   border-radius: 6px;
   padding: 5px 0;
     position: absolute;
-  z-index: 1;
+  /* z-index: 1; */
   left: 20em;
   top: 100px;
   transition: 0.1s;
@@ -450,7 +450,7 @@ form.nosubmit {
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
-  z-index: 1;
+  /* z-index: 1; */
   left: 22.2em;
   top: 100px;
   transition: 0.1s;
@@ -610,11 +610,10 @@ padding-top: 35px;
   .nav div.main_list ul li{
       width: 100%;
       height: 40px;
-      background-color:rgba(4, 48, 167, 0.8);
-      z-index: 2;
-
+      background-color:rgba(0, 37, 139, 0.8);
+      z-index: 1;
   }
-  
+
   .nav div.main_list ul li a{
     text-align: center;
       line-height: 40px;
@@ -623,9 +622,13 @@ padding-top: 35px;
       display: table;
 
   }
-  
+  #mainListDiv{
+    margin-top: 1px;
+  }
   .nav div.media_button{
       display: block;
+      top: 0px;
+      z-index: 2;
   }
   .bottom-container{
     float: right;
