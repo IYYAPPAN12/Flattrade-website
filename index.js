@@ -44,7 +44,12 @@ alert("Please enter a Symbols!");
 return;
 }
 
-var taskList = document.getElementById("taskcon");
+
+var taskList1 = document.getElementById("taskcon1");
+var taskList2 = document.getElementById("taskcon2");
+var taskList3 = document.getElementById("taskcon3");
+var taskList4 = document.getElementById("taskcon4");
+var taskList5 = document.getElementById("taskcon5");
 
 var li = document.createElement("li");
 li.textContent = taskText;
@@ -65,7 +70,7 @@ li.remove();
 
 li.appendChild(sellButton);
 li.appendChild(buyButton);
-taskList.appendChild(li);
+taskList1.appendChild(li);
 taskInput.value = "";
 
 }
@@ -119,6 +124,21 @@ function showPage(pageId) {
     // Show the selected page
     document.getElementById(pageId).style.display = 'block';
   }
+
+
+
+  function showbottomPage(pageId) {
+    // Hide all pages
+    var pages = document.querySelectorAll('.bottom-content');
+    for (var i = 0; i < pages.length; i++) {
+      pages[i].style.display = 'none';
+    }
+
+    // Show the selected page
+    document.getElementById(pageId).style.display = 'block';
+  }
+
+
 
 
 
