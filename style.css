@@ -363,10 +363,13 @@ form.nosubmit {
   left: 10px;
 }
 .search .fa-search {left:10px; right:auto;}
-.grid-view i{
+.grid-container{
+  margin-top: 22px;
+  margin-left:21.2em;
+}
+.grid-container i{
   width:35px;
   height: 35px;
-  position: relative;
   cursor: pointer;
   top: 22px;
   left: 340px;
