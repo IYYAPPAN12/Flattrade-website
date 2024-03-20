@@ -33,6 +33,7 @@ mediaButton.classList.toggle("active");
 //Icon change content
 
 var taskInput = document.getElementById("taskInput");
+let currentPage = 1;
 taskInput.addEventListener("keyup", function(event) {
 if (event.key === "Enter") {
 event.preventDefault();
@@ -44,12 +45,7 @@ alert("Please enter a Symbols!");
 return;
 }
 
-
-var taskList1 = document.getElementById("taskcon1");
-var taskList2 = document.getElementById("taskcon2");
-var taskList3 = document.getElementById("taskcon3");
-var taskList4 = document.getElementById("taskcon4");
-var taskList5 = document.getElementById("taskcon5");
+var taskList = document.getElementById(`page${currentPage}`);
 
 var li = document.createElement("li");
 li.textContent = taskText;
@@ -70,15 +66,23 @@ li.remove();
 
 li.appendChild(sellButton);
 li.appendChild(buyButton);
-taskList1.appendChild(li);
+taskList.appendChild(li);
 taskInput.value = "";
 
 }
 });
 
+function changePage(pageNumber){
+  const previousPageDiv = document.getElementById(`page${currentPage}`);
+  const nextPageDiv = document.getElementById(`page${pageNumber}`);
+  previousPageDiv.classList.remove('active');
+  nextPageDiv.classList.add('active');
+  currentPage = pageNumber;
+}
+
 document.addEventListener('DOMContentLoaded', function () {
 const iconBtn = document.getElementById('grid-icon');
-var textElement = document.getElementById('taskcon');
+var textElement = document.getElementById('pages');
 var isStyled = false;
 
 let iconState = 0;
@@ -91,7 +95,6 @@ iconBtn.addEventListener('click', function () {
 
   } else {
       iconBtn.innerHTML = '<i id="toggle-icon" class="fa fa-bars">';
-
   }
 });
 

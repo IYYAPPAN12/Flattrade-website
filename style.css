@@ -35,85 +35,48 @@
   margin-left: 5%;
   margin-right: 30px;
 }
-
-
-.showLeft {
-  /* background-color: white !important; */
-  /* border: 1px solid white !important; */
-  text-shadow: white !important;
-  color: black !important;
-  padding: 10px;
-}
-.icons li {
-  background: none repeat scroll 0 0 rgb(63, 62, 62);
-  height: 3px;
-  width: 3px;
-  line-height: 0;
-  list-style: none outside none;
-  margin-right: 15px;
-  margin-top: 3px;
-  vertical-align: top;
-  border-radius: 50%;
-  pointer-events: none;
-}
-.btn-left {
-  left: 0.4em;
-}
-.btn-right {
-  right: 0.4em;
-}
-.btn-left,
-.btn-right {
-  position: absolute;
-  top: 0.24em;
-}
-.dropbtn {
-  /* background-color: #4caf50; */
-  position: fixed;
-  color: white;
-  font-size: 16px;
-  border: none;
+.dots {
   cursor: pointer;
+  font-size: 24px;
+  padding-left: 30px;
 }
+.dots:after {
+content: '\2807';
+font-size: 18px;
+}
+
 
 .dropdown {
-  position: absolute;
-  display: inline-block;
-  right: 0.3em;
+  position: relative;
+  display: inline-block; 
+  right: -54.5em;
 }
+
 .dropdown-content {
   display: none;
-  position: relative;
-  margin-top: 55px;
+  position: absolute;
   background-color: #f9f9f9;
-  min-width: 260px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  min-width: 180px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   z-index: 1;
-
+  border: 1px solid rgb(105, 105, 105);
+  right: -20px;
+  top: 15px;
 }
-
 .dropdown-content a {
   color: black;
-  padding-bottom: 60px;
-  padding-top:-10px ;
   text-decoration: none;
-  height: 20px;
-  display: block;
+  border-bottom:1px solid rgb(218, 218, 218) ;
+  font-size: 12px;
+  width: 250px;
+  display: inline-block;
+  height: 58px;
+  margin-top: -20px;
 }
-
-.dropdown a:hover {
-  background-color: #d4d4d4;
+.dropdown-content a:hover{
+position: static; 
+background-color: rgb(192, 192, 192);
 }
-
-.show {
-  display: block;
-}
-
-
-
-
-
 
 .line{
   border-left: 2px solid rgb(212, 206, 206);
@@ -425,7 +388,7 @@ form.nosubmit {
   border-radius: 6px;
   padding: 5px 0;
     position: absolute;
-  /* z-index: 1; */
+  z-index: 1;
   left: 20em;
   top: 100px;
   transition: 0.1s;
@@ -453,7 +416,7 @@ form.nosubmit {
   border-radius: 6px;
   padding: 5px 0;
   position: absolute;
-  /* z-index: 1; */
+  z-index: 1;
   left: 22.2em;
   top: 100px;
   transition: 0.1s;
@@ -478,6 +441,7 @@ padding-top: 35px;
 }
 .content-color li{
   padding: 10px;
+  color: #0ead23;
   font-size: 15px;
   font-weight: 400;
   margin-bottom: 5px;
@@ -506,8 +470,27 @@ padding-top: 35px;
   padding-left: 28px;
   overflow: scroll;
 }
+
+.page {
+  display: none;
+  list-style-type: none;
+
+}
+.active {
+  display: block;
+}
+.page-content{
+margin-top: -30px;
+}
+
 /* Delete button style */
-.delete-btn {
+.delete-btn{
+display: none;
+transition:2s;
+margin-left: -100px;
+
+}
+.page li:hover .delete-btn{
   float: right;
   margin-left: 0px;
   padding: 5px 10px;
@@ -517,12 +500,13 @@ padding-top: 35px;
   cursor: pointer;
   border-radius: 5px;
   text-align: center;
-  /* margin-left:250px; */
-}
-.delete-btn:hover {
+  display: block;
   background-color: #c82333;
 }
-.buy-btn {
+.buy-btn{
+display: none;
+}
+.page li:hover .buy-btn {
   float: right;
   text-align: center;
   margin-left: 0px;
@@ -532,8 +516,7 @@ padding-top: 35px;
   border-radius: 5px;
   border: none;
   cursor: pointer;
-  /* margin-left:300px; */
-
+  display: block;  
 }
 .buy-btn:hover {
   background-color: #0ead23;
@@ -559,8 +542,10 @@ padding-top: 35px;
   color: #0c0a0a;
   padding: 25px;
   padding-bottom:15px ;
+  cursor: pointer;
   text-decoration: none;
-  transition: color 0.3s, border-bottom 0.3s; 
+  border: none;
+  transition: color 0.1s, border-bottom 0.1s; 
 }
 .bottom-container a:hover {
   color: #1183d6;
@@ -613,24 +598,22 @@ padding-top: 35px;
   .nav div.main_list ul li{
       width: 100%;
       height: 40px;
-      background-color:rgba(0, 37, 139, 0.8);
-      z-index: 1;
-  }
+      background-color:rgba(4, 48, 167, 0.8);
+      z-index: 2;
 
+  }
+  
   .nav div.main_list ul li a{
     text-align: center;
       line-height: 40px;
       width: 100%;
       height: 40px;
       display: table;
+
   }
-  #mainListDiv{
-    margin-top: 1px;
-  }
+  
   .nav div.media_button{
       display: block;
-      top: 0px;
-      z-index: 2;
   }
   .bottom-container{
     float: right;

@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="profit.png">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="res.css">
     <title>Flattrade</title>
 </head>
 
@@ -37,29 +36,20 @@
                     <li><a href="#" ><span class="line"></span><span class="userid">FT042297</span></a></li>
                     <li><a href="#" class="bell-icon"><i class="material-icons">&#xe7f5;</i></a></li>
                 </ul>
-
             </div>
-
-            <div>
-              <!-- three dot menu -->
-              <div class="dropdown">
-                <!-- three dots -->
-                <ul class="dropbtn icons btn-right showLeft" onclick="showDropdown()">
-                  <li></li>
-                  <li></li>
-                  <li></li>
-                </ul>
-                <!-- menu -->
-                <div id="myDropdown" class="dropdown-content">
-                  <a href="#">Refer and Earn</a>
-                  <a href="#">Ledger</a>
-                  <a href="#">Margin Calculator</a>
-                  <a href="#">Span Calculator</a>
-                  <a href="#">Brokerage Calculator</a>
-                  <a href="#">Help and support</a>
+            <div class="dropdown">
+                <div onclick="toggleDropdown()" class='dots'></div>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="#">Refer and Earn</a>
+                    <a href="#">Ledger</a>
+                    <a href="#">Margin Calculator</a>
+                    <a href="#">Span Calculator</a>
+                    <a href="#">Brokerage Calculator</a>
+                    <a href="#">Help and support</a>
                 </div>
-              </div>
             </div>
+
+
 
             <div class="media_button">
                 <button class="main_media_button" id="mediaButton">
@@ -82,51 +72,33 @@
             <input id="taskInput" class="nosubmit" type="search" placeholder="Search eg:NIFTY,RELIANCE,GOLD">
         </div>
         <div class="grid-container">
-          <a id="grid-icon" class="grid-icon" href="#"><i id="toggle-icon" class="fa fa-th-large"></i>
-              <span class="tooltiptext">View</span>
-          </a>
-          <a class="setting-icon" href="#"><i class="fa fa-gear"></i>
-              <span class="tooltipsetting">Settings</span>
-          </a>
-      </div>
-        <div class="bottom-content" id="row-1">
-        <div class="content-color" style="list-style-type: none;">
-            <ul id="taskcon1"></ul>
+            <a id="grid-icon" class="grid-icon" href="#"><i id="toggle-icon" class="fa fa-th-large"></i>
+                <span class="tooltiptext">View</span>
+            </a>
+            <a class="setting-icon" href="#"><i class="fa fa-gear"></i>
+                <span class="tooltipsetting">Settings</span>
+            </a>
         </div>
-      </div>
 
-      <div class="bottom-content" id="row-2">
-        <div class="content-color" style="list-style-type: none;">
-            <ul id="taskcon2">2</ul>
-        </div>
-      </div>
-
-      <div class="bottom-content" id="row-3">
-        <div  class="content-color" style="list-style-type: none;">
-            <ul id="taskcon3">3</ul>
-            
-        </div>
-      </div>
-
-      <div class="bottom-content" id="row-4">
-        <div class="content-color" style="list-style-type: none;">
-            <ul id="taskcon4">4</ul>
-            
-        </div>
-      </div>
-
-      <div class="bottom-content" id="row-5">
-        <div class="content-color" style="list-style-type: none;">
-            <ul id="taskcon5">5</ul>
+        <div id="pages" class="taskcon page-content">
+          <div id="page1" class="page active content-color">
+          </div>
+          <div id="page2" class="page content-color">
+          </div>
+          <div id="page3" class="page content-color">
+          </div>
+          <div id="page4" class="page content-color">
+          </div>
+          <div id="page5" class="page content-color">
         </div>
       </div>
         <div class="bottom-container">
             <div class="bottom-num">
-                <a href="#" onclick="showbottomPage('row-1')">1</a>
-                <a href="#" onclick="showbottomPage('row-2')">2</a>
-                <a href="#" onclick="showbottomPage('row-3')">3</a>
-                <a href="#" onclick="showbottomPage('row-4')">4</a>
-                <a href="#" onclick="showbottomPage('row-5')">5</a>
+              <a href="#"onclick="changePage(1)">1</a>
+              <a href="#"onclick="changePage(2)">2</a>
+              <a href="#"onclick="changePage(3)">3</a>
+              <a href="#"onclick="changePage(4)">4</a>
+              <a href="#"onclick="changePage(5)">5</a>
             </div>
         </div>
 
