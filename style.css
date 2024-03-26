@@ -110,6 +110,8 @@
   display: block;
 }
 
+/* Settings dropdown */
+
 
 
 
@@ -853,5 +855,21 @@ margin-left: 15em;
 }
 
 .position-table td{
-font-size: 10px;
+font-size: 15px;
 }
+
+.holding-head{
+  font-size: 30px;
+}
+.margin-table{
+  margin-left: 20em;
+  margin-top: -60px;
+}
+.margin-head{
+  font-size: 25px;
+  font-weight: 400;
+  padding-bottom: 20px;
+}
+
+
+/* Dropdown content code */

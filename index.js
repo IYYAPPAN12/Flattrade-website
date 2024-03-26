@@ -23,6 +23,9 @@ window.onclick = function(event) {
 };
 
 
+
+
+
 var mainListDiv = document.getElementById("mainListDiv"),
 mediaButton = document.getElementById("mediaButton");
 mediaButton.onclick = function () {
@@ -64,13 +67,26 @@ buyButton.onclick = function() {
 li.remove();
 };
 
+// var settingsButton = document.createElement("button");
+// buyButton.textContent = "settings";
+// buyButton.className = "settings-btn";
+// buyButton.onclick = function() {
+// li.remove();
+// };
+
 li.appendChild(sellButton);
 li.appendChild(buyButton);
+// li.appendChild(settingsButton);
 taskList.appendChild(li);
 taskInput.value = "";
 
 }
 });
+
+
+//Settings drop down
+
+
 
 function changePage(pageNumber){
   const previousPageDiv = document.getElementById(`page${currentPage}`);
@@ -113,6 +129,13 @@ isStyled = !isStyled;
 iconBtn.addEventListener('click', toggleStyle);
 
 });
+
+// Settings dropdown here
+
+
+
+
+
 
 // Changing page content code here 
 
