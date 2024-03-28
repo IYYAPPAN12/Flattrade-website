@@ -86,7 +86,22 @@ taskInput.value = "";
 
 //Settings drop down
 
+function myFunction() {
+  document.getElementById("setDropdown").classList.toggle("set");
+}
 
+window.onclick = function(event) {
+  if (!event.target.matches('.settingsbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-settings");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('set')) {
+        openDropdown.classList.remove('set');
+      }
+    }
+  }
+}
 
 function changePage(pageNumber){
   const previousPageDiv = document.getElementById(`page${currentPage}`);
