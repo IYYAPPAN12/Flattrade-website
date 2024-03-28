@@ -111,6 +111,7 @@ function changePage(pageNumber){
   currentPage = pageNumber;
 }
 
+
 document.addEventListener('DOMContentLoaded', function () {
 const iconBtn = document.getElementById('grid-icon');
 var textElement = document.getElementById('pages');
