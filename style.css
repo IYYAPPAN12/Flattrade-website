@@ -18,6 +18,7 @@
 }
 body{
   font-family: 'Open Sans', Arial, Helvetica, Sans-serif, Verdana, Tahoma;
+  scroll-behavior: smooth;
 
 }
 .niftycolor{
@@ -33,8 +34,10 @@ body{
   font-weight:400;
 }
 .bell-icon i{
-  color: #25b0f0;
-
+  color: #077aaf;
+  font-size: 30px;
+  margin-top: 10px;
+  font-weight: 100;
 }
 
 .container{
@@ -44,8 +47,6 @@ body{
 
 
 .showLeft {
-  /* background-color: white !important; */
-  /* border: 1px solid white !important; */
   text-shadow: white !important;
   color: black !important;
   padding: 10px;
@@ -573,14 +574,71 @@ display: none;
 }
 
 /* Bottom num styles here */
+
+
+
+
+.bottom-nav {
+  display: inline-flex;
+  position: relative;
+
+}
+
+.page-item {
+  color: #83818c;
+  padding: 20px;
+  text-decoration: none;
+  transition: .3s;
+  margin: 0 6px;
+  z-index: 1;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  position: relative;
+  
+  &:before {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background-color: #dfe2ea;
+    border-radius: 8px 8px 0 0;
+    opacity: 0;
+    transition: .3s;
+  }
+}
+
+.page-item:not(.is-active):hover:before {
+  opacity: 1;
+  bottom: 0;
+}
+
+
+.page-item:not(.is-active):hover { color: #333; }
+
+.nav-indicator {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 4px;
+  transition: .4s;
+  height: 5px;
+  z-index: 1;
+  border-radius: 8px 8px 0 0;
+}
+
+@media (max-width: 580px) {
+  .bottom-nav { overflow: auto; }
+}
+
 .bottom-container {
-  /* display: flex; */
   float: right;
   align-items: center;
   justify-content: space-around;
   position:fixed;
-  padding: 15px;
   bottom: 8px;
+  width: 30%;
   border-top: 1px solid rgb(207, 197, 197);
 }
 .bottom-num{
@@ -593,19 +651,9 @@ display: none;
   padding: 25px;
   padding-bottom:15px ;
   text-decoration: none;
-  transition: color 0.3s, border-bottom 0.3s; 
-}
-.bottom-container a:hover {
-  color: #1183d6;
-  border-bottom: 4px solid rgb(18, 128, 218);
+  transition: all .2s ease;
 
 }
-.bottom-container a:focus{
-  color: #1183d6;
-  border-bottom: 4px solid rgb(18, 128, 218);
-}
-
-
 
 
 /* Medai qurey section */
@@ -625,6 +673,9 @@ display: none;
   }
   .nav div.logo{
       margin-left: 1px;
+  }
+  .bottom-container{
+    width: 79%;
   }
   
   .nav div.main_list{
@@ -764,13 +815,7 @@ padding-bottom: 8px;
 color: #004aaa;
 font-size: 20px;
 font-weight:600;
-
 }
-/* .table-container td:nth-child(even) {
-  text-align: center;
-color: #8f8f8f;
-} */
-
 
 /* Margin content here */
 
@@ -949,7 +994,7 @@ border: 1px solid rgb(243, 239, 239);
 #home {
 display: block;
 }
-#order, #position,#holding,#margin,#market,#profile {
+#order, #position,#holding,#margin,#market,#profile,#alert {
 display: none;
 }
 
@@ -966,12 +1011,25 @@ margin-left:26em;
 margin-top: -34.5em;
 justify-content: space-between;
 }
+.no-position{
+  color: rgb(187, 187, 187);
+  text-align: center;
+  font-size: 30px;
+  padding: 10px;
+}
 .holding-content{
 padding: 10px;
 margin-left:26em;
 margin-top: -34.5em;
 justify-content: space-between;
 }
+.no-holding{
+  color: rgb(182, 182, 182);
+  text-align: center;
+  font-size: 15px;
+  padding: 10px;
+}
+
 .margin-content{
 padding: 10px;
 margin-left:26em;
@@ -1079,5 +1137,3 @@ font-size: 15px;
 .settings-drop a:hover {background-color: #ddd;}
 
 .set {display: block;}
-
-

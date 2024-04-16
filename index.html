@@ -36,7 +36,7 @@
                     <li><a href="#" onclick="showPage('margin')">Margins</a></li>
                     <li><a href="#" onclick="showPage('market')">Market</a></li>
                     <li><a href="#" onclick="showPage('profile')"><span class="line"></span><span class="userid">FT042297</span></a></li>
-                    <li><a href="#" class="bell-icon"><i class="material-icons">&#xe7f5;</i></a></li>
+                    <li><a href="#" onclick="showPage('alert')" class="bell-icon"><i class="material-icons">&#xe7f5;</i></a></li>
                 </ul>
 
             </div>
@@ -90,8 +90,6 @@
               <span class="tooltipsetting">Settings</span>
 
           </a>
-          <!-- <button onclick="myFunction()" class="settingsbtn">Dropdown</button> -->
-
           <div class="settings-drop">
             <div id="setDropdown" class="dropdown-settings">
               <a href="#home">Home</a>
@@ -114,11 +112,14 @@
     </div>
       <div class="bottom-container">
           <div class="bottom-num">
-            <a href="#"onclick="changePage(1)">1</a>
-            <a href="#"onclick="changePage(2)">2</a>
-            <a href="#"onclick="changePage(3)">3</a>
-            <a href="#"onclick="changePage(4)">4</a>
-            <a href="#"onclick="changePage(5)">5</a>
+            <div class="bottom-nav">
+              <a href="#" onclick="changePage(1)" class="page-item is-active" active-color="#0074D9">1</a>
+              <a href="#" onclick="changePage(2)" class="page-item" active-color="green">2</a>
+              <a href="#" onclick="changePage(3)" class="page-item" active-color="blue">3</a>
+              <a href="#" onclick="changePage(4)" class="page-item" active-color="red">4</a>
+              <a href="#" onclick="changePage(5)" class="page-item" active-color="rebeccapurple">5</a>
+              <span class="nav-indicator"></span>
+            </div>
           </div>
       </div>
 
@@ -255,6 +256,8 @@
       </div>
     </div>
     <hr>
+    <p class="no-position">No Positions</p>
+    <hr>
 
     </div>
     </div>
@@ -281,6 +284,7 @@
       </div>
     </div>
     <hr>
+    <p class="no-holding">No Holdings</p>
     </div>
     </div>
     <div class="content" id="margin">
@@ -437,6 +441,11 @@
   </div>
 </div>
 
+
+<div class="content" id="alert">
+Hello
+<h1>Welcome</h1>
+</div>
 
 
 
