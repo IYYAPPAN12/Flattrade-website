@@ -149,7 +149,7 @@ body{
   position: fixed;
   line-height: 58px;
   text-align: center;
-  background-color: rgb(243, 243, 243);
+  background-color: rgb(255, 255, 255);
   box-shadow: 1px 1px 5px 2px rgb(155, 155, 155);
 }
 
