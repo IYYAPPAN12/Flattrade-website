@@ -37,7 +37,7 @@ body{
   font-weight:400;
 }
 .bell-icon i{
-  color: #077aaf;
+  color: #1695cf;
   font-size: 30px;
   margin-top: 10px;
   font-weight: 100;
@@ -134,7 +134,7 @@ body{
 
 
 .line{
-  border-left: 2px solid rgb(212, 206, 206);
+  border-left: 2px solid rgb(221, 217, 217);
   margin-right: 10px;
 }
 .trade-color{
@@ -154,7 +154,7 @@ body{
 }
 
 .nav div.logo{
-  left: 24.5em;
+  left: 25.1em;
   width: 180px;
   line-height: 45px;
   position: absolute;
@@ -224,9 +224,9 @@ body{
   font-size: 14px;
 }
 
-.nav div.main_list ul li a:hover{
+/* .nav div.main_list ul li a:hover{
   color: #c0c0c0;
-}
+} */
 
 .nav div.media_button {
   width: 40px;
@@ -366,6 +366,9 @@ form.nosubmit {
   display: inline-block;
   top: 58px;
 
+}
+#fa-search{
+  font-size: 24px;
 }
 .search input {
   width: 337px;
@@ -649,6 +652,7 @@ display: none;
 }
 .bottom-container a {
   font-size: 13px;
+  width: 10px;
   color: #0c0a0a;
   padding: 25px;
   padding-bottom:15px ;
@@ -772,7 +776,7 @@ margin-bottom: -30px;
   cursor: pointer;
 }
 .withdraw-btn{
-  margin-left: 3em;
+  margin-left: 10px;
   background-color: #0091f8;
   font-size: 15px;
   color: white;
@@ -975,16 +979,18 @@ border-bottom: 1px solid rgb(197, 195, 195);
 .data{
 left: 20px;
 text-align: center;
-font-size: 13px;
-height: 40px;
-padding-right: 60px;
+color: #9e9e9e;
+font-size: 10px;
+height: 25px;
+padding-right: 65px;
 align-items:center;
 }
 .value{
   text-align: center;
-  height: 20px;
-  font-size: 15px;
+  font-size: 18px;
+  font-weight: 400;
   padding-right: 70px;
+  color: #3f3e3e;
 }
 hr{
 border: 1px solid rgb(243, 239, 239);
@@ -1248,3 +1254,7 @@ font-size: 15px;
 }
 
 
+
+.colprice{
+  width: 15%;
+}

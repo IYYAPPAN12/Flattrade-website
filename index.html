@@ -25,18 +25,18 @@
                 <a href="#">NIfty Bank<span class="bankcolor">46800.50</span></a>
             </div>
             <div class="logo">
-                <a href="#" onclick="showPage('home')"><span class="line"></span>Valve<span class="trade-color">Net</span></a>
+                <a href="#" onclick="showPage('home')"><span class="line"></span>FLAT<span class="trade-color">TRADE</span></a>
             </div>
             <div class="main_list" id="mainListDiv">
                 <ul>
-                    <li><a href="#" onclick="showPage('home')">Dashboard</a></li>
-                    <li><a href="#" onclick="showPage('order')">Orders</a></li>
-                    <li><a href="#" onclick="showPage('position')">Positions</a></li>
-                    <li><a href="#" onclick="showPage('holding')">Holdings</a></li>
-                    <li><a href="#" onclick="showPage('margin')">Margins</a></li>
-                    <li><a href="#" onclick="showPage('market')">Market</a></li>
-                    <li><a href="#" onclick="showPage('profile')"><span class="line"></span><span class="userid">FT042297</span></a></li>
-                    <li><a href="#" onclick="showPage('alert')" class="bell-icon"><i class="material-icons">&#xe7f5;</i></a></li>
+                    <li><a class="menu-item in-active" menu-active-color="#0074D9" href="#" onclick="showPage('home')">Dashboard</a></li>
+                    <li><a class="menu-item" href="#" menu-active-color="#0074D9" onclick="showPage('order')">Orders</a></li>
+                    <li><a class="menu-item" href="#" menu-active-color="#0074D9" onclick="showPage('position')">Positions</a></li>
+                    <li><a class="menu-item" href="#" menu-active-color="#0074D9" onclick="showPage('holding')">Holdings</a></li>
+                    <li><a class="menu-item" href="#" menu-active-color="#0074D9" onclick="showPage('margin')">Margins</a></li>
+                    <li><a class="menu-item" href="#" menu-active-color="#0074D9" onclick="showPage('market')">Market</a></li>
+                    <li><a class="menu-item" href="#" menu-active-color="#0074D9" onclick="showPage('profile')"><span class="line"></span><span class="userid">FT042297</span></a></li>
+                    <li><a  href="#"  onclick="showPage('alert')" class="bell-icon"><i class="material-icons">&#xe7f5;</i></a></li>
                 </ul>
 
             </div>
@@ -83,7 +83,9 @@
             <input id="taskInput" class="nosubmit" type="search" placeholder="Search eg:NIFTY,RELIANCE,GOLD">
         </div>
         <div class="grid-container">
-          <a id="grid-icon" class="grid-icon" href="#"><i id="toggle-icon" class="fa fa-th-large"></i>
+          <a id="grid-icon" class="grid-icon" href="#">
+            <i id="toggle-icon" class="fa fa-th-large"></i>
+
               <span class="tooltiptext">View</span>
           </a>
           <a class="setting-icon " id=""  href="#" ><i onclick="myFunction()" class="fa fa-gear settingsbtn"></i>
@@ -114,10 +116,10 @@
           <div class="bottom-num">
             <div class="bottom-nav">
               <a href="#" onclick="changePage(1)" class="page-item is-active" active-color="#0074D9">1</a>
-              <a href="#" onclick="changePage(2)" class="page-item" active-color="green">2</a>
-              <a href="#" onclick="changePage(3)" class="page-item" active-color="blue">3</a>
-              <a href="#" onclick="changePage(4)" class="page-item" active-color="red">4</a>
-              <a href="#" onclick="changePage(5)" class="page-item" active-color="rebeccapurple">5</a>
+              <a href="#" onclick="changePage(2)" class="page-item" active-color="#0074D9">2</a>
+              <a href="#" onclick="changePage(3)" class="page-item" active-color="#0074D9">3</a>
+              <a href="#" onclick="changePage(4)" class="page-item" active-color="#0074D9">4</a>
+              <a href="#" onclick="changePage(5)" class="page-item" active-color="#0074D9">5</a>
               <span class="nav-indicator"></span>
             </div>
           </div>
@@ -132,6 +134,7 @@
           <div class="btn-con"><button class="fund-btn">Add fund</button>
             <button class="withdraw-btn">Withdraw</button></div>
             <div class="table-container">
+              <table>
             <table id="myTable">
                 <thead>
                   <tr  class="table-heading">
@@ -140,14 +143,14 @@
                 </thead>
                 <tbody>
                         <tr>
-                        <td class="value"><p>0.00</p></td>
-                        <td class="value"><p>0.00</p></td>
-                        <td class="value"><p>0.00</p></td>
+                        <td class="value colprice"><p>0.00</p></td>
+                        <td class="value colprice"><p>0.00</p></td>
+                        <td class="value colprice"><p>0.00</p></td>
                       </tr>
                       <tr class="border">
-                    <td class="data">Available margin</td>
-                    <td class="data">Total Credits</td>
-                    <td class="data">Utilization</td>
+                    <td class="data colprice">Available margin</td>
+                    <td class="data colprice">Total Credits</td>
+                    <td class="data colprice">Utilization</td>
                   </tr>
                   </tbody>
                   </table>
@@ -160,14 +163,14 @@
                 </thead>
                 <tbody>
                         <tr>
-                        <td class="value"><p>0</p></td>
-                        <td class="value"><p>0</p></td>
-                        <td class="value"><p>0</p></td>
+                        <td class="value colprice"><p>0</p></td>
+                        <td class="value colprice"><p>0</p></td>
+                        <td class="value colprice"><p>0</p></td>
                       </tr>
                       <tr class="border">
-                    <td class="data">Pending</td>
-                    <td class="data">Closed</td>
-                    <td class="data">Rejected list</td>
+                    <td class="data colprice">Pending</td>
+                    <td class="data colprice">Closed</td>
+                    <td class="data colprice">Rejected list</td>
                   </tr>
                 </tbody>
                 </table>
@@ -180,14 +183,14 @@
                 </thead>
                 <tbody>
                         <tr >
-                        <td class="value"><p>0.00</p></td>
-                        <td class="value"><p>0.00</p></td>
-                        <td class="value"><p>0.00</p></td>
+                        <td class="value colprice"><p>0.00</p></td>
+                        <td class="value colprice"><p>0.00</p></td>
+                        <td class="value colprice"><p>0.00</p></td>
                       </tr>
                       <tr class="border">
-                    <td class="data">Open Position</td>
-                    <td class="data">Total P&L</td>
-                    <td class="data">Days MTM</td>
+                    <td class="data colprice">Open Position</td>
+                    <td class="data colprice">Total P&L</td>
+                    <td class="data colprice">Days MTM</td>
                   </tr>
                 </tbody>
                 </table>
@@ -200,17 +203,18 @@
                 </thead>
                 <tbody>
                         <tr >
-                        <td class="value"><p>0.00</p></td>
-                        <td class="value"><p>0.00</p></td>
-                        <td class="value"><p>0.00</p></td>
+                        <td class="value colprice"><p>0.00</p></td>
+                        <td class="value colprice"><p>0.00</p></td>
+                        <td class="value colprice"><p>0.00</p></td>
                       </tr>
                       <tr class="border">
-                    <td class="data">Total Investment</td>
-                    <td class="data">Current value</td>
-                    <td class="data">P&L</td>
+                    <td class="data colprice">Total Investment</td>
+                    <td class="data colprice">Current value</td>
+                    <td class="data colprice">P&L</td>
                   </tr>
                 </tbody>
               </table>
+            </table>
               <hr>
             </div>
         </div>

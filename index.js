@@ -22,7 +22,20 @@ window.onclick = function(event) {
   }
 };
 
+const item1 = document.querySelectorAll('.menu-item');
 
+function handlemenu(dl) {
+  item1.forEach(mitem => {
+    mitem.classList.remove('in-active');
+    mitem.removeAttribute('style');
+  });
+  dl.classList.add('in-active');
+  dl.style.color = dl.getAttribute('menu-active-color');
+}
+item1.forEach((mitem, index) => {
+  mitem.addEventListener('click', (a) => { handlemenu(a.target)});
+  mitem.classList.contains('in-active') && handlemenu(mitem);
+});
 
 
 
@@ -349,3 +362,5 @@ function showPage(pageId) {
       moveMarker();
     });
   });
+
+
